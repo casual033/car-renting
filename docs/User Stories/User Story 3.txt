@@ -1,0 +1,2 @@
+As an operator I want to be able to delete cars..
+Note: delete all references..
