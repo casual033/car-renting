@@ -23,9 +23,9 @@ public interface Customer extends User {
 
     String getLastName();
 
-    public List<Rent> getUserRents();
+    public List<Rent> getCustomerRents();
 
-    public void setUserRents(List<Rent> userRents);
+    public void setCustomerRents(List<Rent> customerRents);
 
     void setEmail(String email);
 

@@ -21,14 +21,14 @@ public class CustomerBean extends UserBean implements Customer  {
     private String jmbg;
     private String email;
     private String homeAddress;
-    private List<Rent> userRents;
+    private List<Rent> customerRents;
 
-    public List<Rent> getUserRents() {
-        return userRents;
+    public List<Rent> getCustomerRents() {
+        return customerRents;
     }
 
-    public void setUserRents(List<Rent> userRents) {
-        this.userRents = userRents;
+    public void setCustomerRents(List<Rent> customerRents) {
+        this.customerRents = customerRents;
     }
 
     public String getEmail() {
