@@ -49,8 +49,22 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             <version>2.5</version>
             <scope>provided</scope>
         </dependency>
-
-    </dependencies>
+                <dependency>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate</artifactId>
+                        <version>3.2.6.ga</version>
+                </dependency>
+                <dependency>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate-annotations</artifactId>
+                        <version>3.3.0.ga</version>
+                </dependency>
+                <dependency>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate-commons-annotations</artifactId>
+                        <version>3.3.0.ga</version>
+                </dependency>
+        </dependencies>
     <build>
         <finalName>car-renting</finalName>
         <plugins>
