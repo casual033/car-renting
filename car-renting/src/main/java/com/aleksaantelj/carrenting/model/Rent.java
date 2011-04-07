@@ -13,17 +13,11 @@ import java.util.Date;
  */
 public interface Rent {
 
-    int getCarId();
-
     Date getIssueDate();
 
     Date getReturnDate();
 
-    int getUserId();
-
     boolean isReturned();
-
-    void setCarId(int carId);
 
     void setIssueDate(Date issueDate);
 
@@ -31,6 +25,5 @@ public interface Rent {
 
     void setReturned(boolean returned);
 
-    void setUserId(int userId);
 
 }

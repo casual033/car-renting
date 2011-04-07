@@ -6,28 +6,45 @@
 package com.aleksaantelj.carrenting.model.beans;
 
 import com.aleksaantelj.carrenting.model.Rent;
+import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
  * @author Aleksa Antelj
  */
-public class RentBean implements Rent {
+@Entity
+public class RentBean implements Rent, Serializable {
 
-    private int userId;
-    private int carId;
+
+    private int id;
+
     private Date issueDate;
     private Date returnDate;
     private boolean returned;
 
-    public int getCarId() {
-        return carId;
+    private CustomerBean customer;
+    private CarBean car;
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    public int getId() {
+        return id;
     }
 
-    public void setCarId(int carId) {
-        this.carId = carId;
+    public void setId(int id) {
+        this.id = id;
     }
 
+    @Temporal(TemporalType.DATE)
     public Date getIssueDate() {
         return issueDate;
     }
@@ -36,6 +53,7 @@ public class RentBean implements Rent {
         this.issueDate = issueDate;
     }
 
+    @Temporal(TemporalType.DATE)
     public Date getReturnDate() {
         return returnDate;
     }
@@ -52,12 +70,24 @@ public class RentBean implements Rent {
         this.returned = returned;
     }
 
-    public int getUserId() {
-        return userId;
+    @ManyToOne(targetEntity=CarBean.class)
+    @JoinColumn(name="CarId")
+    public CarBean getCar() {
+        return car;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setCar(CarBean car) {
+        this.car = car;
+    }
+
+    @ManyToOne(targetEntity=CustomerBean.class)
+    @JoinColumn(name="CustomerId")
+    public CustomerBean getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(CustomerBean customer) {
+        this.customer = customer;
     }
 
 }

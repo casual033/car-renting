@@ -8,12 +8,17 @@ package com.aleksaantelj.carrenting.model.beans;
 import com.aleksaantelj.carrenting.model.Customer;
 import com.aleksaantelj.carrenting.model.Rent;
 import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 
 
 /**
  *
  * @author Aleksa Antelj
  */
+@Entity
 public class CustomerBean extends UserBean implements Customer  {
 
     private String firstName;
@@ -23,6 +28,8 @@ public class CustomerBean extends UserBean implements Customer  {
     private String homeAddress;
     private List<Rent> customerRents;
 
+    @OneToMany(targetEntity=RentBean.class,mappedBy="customer",cascade=CascadeType.ALL,
+                    fetch=FetchType.LAZY)
     public List<Rent> getCustomerRents() {
         return customerRents;
     }

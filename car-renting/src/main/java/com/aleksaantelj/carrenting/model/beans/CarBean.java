@@ -7,13 +7,22 @@ package com.aleksaantelj.carrenting.model.beans;
 
 import com.aleksaantelj.carrenting.model.Car;
 import com.aleksaantelj.carrenting.model.Rent;
+import java.io.Serializable;
 import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author Aleksa Antelj
  */
-public class CarBean implements Car {
+@Entity
+public class CarBean implements Car, Serializable {
 
     private int id;
     private String registrationNumber;
@@ -24,6 +33,8 @@ public class CarBean implements Car {
     private float dailyPrice;
     private List<Rent> carRents;
 
+    @OneToMany(targetEntity=RentBean.class,mappedBy="car",cascade=CascadeType.ALL,
+                    fetch=FetchType.LAZY)
     public List<Rent> getCarRents() {
         return carRents;
     }
@@ -64,6 +75,8 @@ public class CarBean implements Car {
         this.category = category;
     }
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     public int getId() {
         return id;
     }
