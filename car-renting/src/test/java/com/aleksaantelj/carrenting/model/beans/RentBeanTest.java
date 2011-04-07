@@ -27,19 +27,17 @@ public class RentBeanTest {
     }
 
     @Test
-    public void testUserId() {
-        assertNotNull(testRent.getUserId());
-        int userId = 31;
-        testRent.setUserId(userId);
-        assertEquals(userId, testRent.getUserId());
+    public void testCustomer() {
+        assertNull(testRent.getCustomer());
+        testRent.setCustomer(new CustomerBean());
+        assertNotNull(testRent.getCustomer());
     }
 
     @Test
-    public void testCarId() {
-        assertNotNull(testRent.getCarId());
-        int carId = 31;
-        testRent.setCarId(carId);
-        assertEquals(carId, testRent.getCarId());
+    public void testCar() {
+        assertNull(testRent.getCar());
+        testRent.setCar(new CarBean());
+        assertNotNull(testRent.getCar());
     }
 
     @Test
