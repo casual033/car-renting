@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -22,6 +23,7 @@ import javax.persistence.TemporalType;
  * @author Aleksa Antelj
  */
 @Entity
+@Table(name="Rent")
 public class RentBean implements Rent, Serializable {
 
 

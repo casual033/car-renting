@@ -9,9 +9,11 @@ import com.aleksaantelj.carrenting.model.Customer;
 import com.aleksaantelj.carrenting.model.Rent;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 
 /**
@@ -19,6 +21,7 @@ import javax.persistence.OneToMany;
  * @author Aleksa Antelj
  */
 @Entity
+@Table(name="Customer")
 public class CustomerBean extends UserBean implements Customer  {
 
     private String firstName;
@@ -38,6 +41,7 @@ public class CustomerBean extends UserBean implements Customer  {
         this.customerRents = customerRents;
     }
 
+    @Column(length=100)
     public String getEmail() {
         return email;
     }
@@ -46,6 +50,7 @@ public class CustomerBean extends UserBean implements Customer  {
         this.email = email;
     }
 
+    @Column(length=50)
     public String getFirstName() {
         return firstName;
     }
@@ -54,6 +59,7 @@ public class CustomerBean extends UserBean implements Customer  {
         this.firstName = firstName;
     }
 
+    @Column(length=255)
     public String getHomeAddress() {
         return homeAddress;
     }
@@ -62,6 +68,7 @@ public class CustomerBean extends UserBean implements Customer  {
         this.homeAddress = homeAddress;
     }
 
+    @Column(length=20)
     public String getJmbg() {
         return jmbg;
     }
@@ -70,6 +77,7 @@ public class CustomerBean extends UserBean implements Customer  {
         this.jmbg = jmbg;
     }
 
+    @Column(length=50)
     public String getLastName() {
         return lastName;
     }

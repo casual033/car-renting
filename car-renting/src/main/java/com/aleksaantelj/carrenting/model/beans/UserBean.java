@@ -7,12 +7,14 @@ package com.aleksaantelj.carrenting.model.beans;
 
 import com.aleksaantelj.carrenting.model.User;
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 
 /**
  *
@@ -21,6 +23,7 @@ import javax.persistence.InheritanceType;
 
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
+@Table(name="User")
 public class UserBean implements Serializable, User {
 
     private int id;
@@ -46,6 +49,7 @@ public class UserBean implements Serializable, User {
         this.id = id;
     }
 
+    @Column(length=100)
     public String getPassword() {
         return password;
     }
@@ -54,6 +58,7 @@ public class UserBean implements Serializable, User {
         this.password = password;
     }
 
+    @Column(length=100,unique=true)
     public String getUsername() {
         return username;
     }

@@ -10,18 +10,21 @@ import com.aleksaantelj.carrenting.model.Rent;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
  *
  * @author Aleksa Antelj
  */
 @Entity
+@Table(name="Car")
 public class CarBean implements Car, Serializable {
 
     private int id;
@@ -43,6 +46,7 @@ public class CarBean implements Car, Serializable {
         this.carRents = rents;
     }
 
+    @Column(precision=10,scale=2)
     public float getDailyPrice() {
         return dailyPrice;
     }
@@ -51,6 +55,7 @@ public class CarBean implements Car, Serializable {
         this.dailyPrice = dailyPrice;
     }
 
+    @Column(length=100)
     public String getBrand() {
         return brand;
     }
@@ -85,6 +90,7 @@ public class CarBean implements Car, Serializable {
         this.id = id;
     }
 
+    @Column(length=100)
     public String getModel() {
         return model;
     }
@@ -93,6 +99,7 @@ public class CarBean implements Car, Serializable {
         this.model = model;
     }
 
+    @Column(length=20)
     public String getRegistrationNumber() {
         return registrationNumber;
     }
