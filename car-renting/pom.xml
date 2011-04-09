@@ -89,6 +89,21 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
                         <artifactId>hsqldb</artifactId>
                         <version>1.8.0.7</version>
                 </dependency>
+                <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
         </dependencies>
     <build>
         <finalName>car-renting</finalName>
@@ -168,5 +183,6 @@ of a Tapestry Maven plugin is not required.   -->
 
     <properties>
         <tapestry-release-version>5.2.4</tapestry-release-version>
+        <spring-version>3.0.2.RELEASE</spring-version>
     </properties>
 </project>
