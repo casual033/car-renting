@@ -104,6 +104,13 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             <artifactId>spring-orm</artifactId>
             <version>${spring-version}</version>
         </dependency>
+                <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-test</artifactId>
+                        <version>3.0.5.RELEASE</version>
+                        <scope>test</scope>
+                        <type>jar</type>
+                </dependency>
         </dependencies>
     <build>
         <finalName>car-renting</finalName>
