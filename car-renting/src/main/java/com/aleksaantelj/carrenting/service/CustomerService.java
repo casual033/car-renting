@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Aleksa Antelj
  */
-public interface CustomerService {
+public interface CustomerService extends UserService {
 
     Customer saveCustomer(Customer customer);
 
