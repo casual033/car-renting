@@ -44,7 +44,9 @@ public class UserServiceDAO implements UserService {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(UserBean.class).
                 add(Restrictions.eq("id",id));
         List users = criteria.list();
-        return (User) users.get(0);
+        if(users.size() > 0)
+            return (User) users.get(0);
+        return null;
     }
 
     public List<User> getAllUsers() {

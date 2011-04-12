@@ -42,8 +42,10 @@ public class CarServiceDAO implements CarService {
     public Car getCar(int id) {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(CarBean.class).
                 add(Restrictions.eq("id",id));
-        List users = criteria.list();
-        return (Car) users.get(0);
+        List cars = criteria.list();
+        if(cars.size() > 0)
+            return (Car) cars.get(0);
+        return null;
     }
 
     public List<Car> getAllCars() {

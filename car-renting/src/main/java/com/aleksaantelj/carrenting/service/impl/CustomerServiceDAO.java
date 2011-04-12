@@ -35,8 +35,10 @@ public class CustomerServiceDAO extends UserServiceDAO implements CustomerServic
     public Customer getCustomer(int id) {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(CustomerBean.class).
                 add(Restrictions.eq("id",id));
-        List users = criteria.list();
-        return (Customer) users.get(0);
+        List customers = criteria.list();
+        if(customers.size()>0)
+            return (Customer) customers.get(0);
+        return null;
     }
 
     public List<Customer> getAllCustomers() {

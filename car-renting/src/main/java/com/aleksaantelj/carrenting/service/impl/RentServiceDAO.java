@@ -44,8 +44,10 @@ public class RentServiceDAO implements RentService {
     public Rent getRent(int id) {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(RentBean.class).
                 add(Restrictions.eq("id",id));
-        List users = criteria.list();
-        return (Rent) users.get(0);
+        List rents = criteria.list();
+        if(rents.size() > 0)
+            return (Rent) rents.get(0);
+        return null;
     }
 
     public List<Rent> getAllRents() {

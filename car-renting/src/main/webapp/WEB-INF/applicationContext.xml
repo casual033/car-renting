@@ -33,11 +33,24 @@
         <property name="sessionFactory">
             <ref bean="sessionFactory"/>
         </property>
-        <property name="user">
-            <ref bean="user"/>
+    </bean>
+
+    <bean id="carService" class="com.aleksaantelj.carrenting.service.impl.CarServiceDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
         </property>
     </bean>
 
-    <bean id="user" class="com.aleksaantelj.carrenting.model.beans.UserBean"/>
+    <bean id="customerService" class="com.aleksaantelj.carrenting.service.impl.CustomerServiceDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="rentService" class="com.aleksaantelj.carrenting.service.impl.RentServiceDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
 
 </beans>
