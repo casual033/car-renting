@@ -1,0 +1,14 @@
+<html t:type="layout" title="Login page"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <p>Welcome to car renting application..</p>
+    <p>Please login..</p>
+
+    <form t:type="form" t:id="userLoginForm">
+        <input type="text" t:type="textField" t:value="username" t:validate="required,minlength=5,maxlength=12"/>
+        <input type="password" t:type="passwordField" t:value="password" t:validate="required,minlength=5,maxlength=12"/>
+        <input type="submit" value="Submit" />
+    </form>
+
+</html>

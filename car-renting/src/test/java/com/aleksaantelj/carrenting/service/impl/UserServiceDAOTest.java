@@ -11,6 +11,7 @@ import static org.testng.AssertJUnit.assertEquals;
 
 import com.aleksaantelj.carrenting.model.User;
 import com.aleksaantelj.carrenting.model.beans.UserBean;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import org.hibernate.Session;
@@ -48,16 +49,6 @@ public class UserServiceDAOTest {
         user.setEmployee(true);
 
         session.beginTransaction();
-    }
-
-    @BeforeMethod
-    public void setUp() {
-        
-    }
-
-    @AfterMethod
-    public void cleanUp() {
-
     }
 
     @Test

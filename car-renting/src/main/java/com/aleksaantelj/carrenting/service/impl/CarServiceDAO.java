@@ -9,6 +9,8 @@ import com.aleksaantelj.carrenting.model.Car;
 import com.aleksaantelj.carrenting.model.beans.CarBean;
 import com.aleksaantelj.carrenting.service.CarService;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
@@ -49,8 +51,12 @@ public class CarServiceDAO implements CarService {
     }
 
     public List<Car> getAllCars() {
-        Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Car.class).
-                addOrder(Order.asc("brand"));
+        Criteria criteria = null;
+        try {
+            criteria = sessionFactory.getCurrentSession().createCriteria(Class.forName("CarBean")).addOrder(Order.asc("brand"));
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CarServiceDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return (List<Car>)criteria.list();
     }
 

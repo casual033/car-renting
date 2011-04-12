@@ -1,14 +1,28 @@
 package com.aleksaantelj.carrenting.pages;
 
-import java.util.Date;
+import com.aleksaantelj.carrenting.model.User;
+import org.apache.tapestry5.annotations.InjectPage;
+import org.apache.tapestry5.annotations.Persist;
+import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.annotations.SessionState;
 
 /**
  * Start page of application car-renting.
  */
 public class Index
 {
-	public Date getCurrentTime() 
-	{ 
-		return new Date(); 
-	}
+
+    @SessionState
+    private User user;
+
+    private boolean userExists;
+    
+    
+
+    Object onActivate() {
+        if (userExists) {
+            return null;
+        }
+        return Login.class;
+    }
 }

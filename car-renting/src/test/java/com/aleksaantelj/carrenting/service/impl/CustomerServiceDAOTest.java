@@ -20,10 +20,8 @@ import org.hibernate.cfg.AnnotationConfiguration;
 
 import static org.testng.AssertJUnit.assertNull;
 import static org.testng.AssertJUnit.assertNotNull;
-import static org.testng.AssertJUnit.assertSame;
 import static org.testng.AssertJUnit.assertEquals;
 
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**

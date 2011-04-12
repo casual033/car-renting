@@ -191,5 +191,6 @@ of a Tapestry Maven plugin is not required.   -->
     <properties>
         <tapestry-release-version>5.2.4</tapestry-release-version>
         <spring-version>3.0.2.RELEASE</spring-version>
+        <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
     </properties>
 </project>
