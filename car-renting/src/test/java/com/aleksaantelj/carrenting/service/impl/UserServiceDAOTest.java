@@ -11,14 +11,11 @@ import static org.testng.AssertJUnit.assertEquals;
 
 import com.aleksaantelj.carrenting.model.User;
 import com.aleksaantelj.carrenting.model.beans.UserBean;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
@@ -35,7 +32,7 @@ public class UserServiceDAOTest {
     public UserServiceDAOTest() {
         testUserDAO = new UserServiceDAO();
 
-        config.configure("hibernate.cfg.xml");
+        config.configure("hibernate.cfg.test.xml");
         config.addAnnotatedClass(UserBean.class);
 
         SessionFactory factory = config.buildSessionFactory();
@@ -49,6 +46,12 @@ public class UserServiceDAOTest {
         user.setEmployee(true);
 
         session.beginTransaction();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        session.getTransaction().rollback();
     }
 
     @Test
@@ -97,7 +100,10 @@ public class UserServiceDAOTest {
         loginUser.setPassword("a");
         loginUser = testUserDAO.authenticateUser(loginUser);
         assertNull(loginUser);
-        loginUser = testUserDAO.authenticateUser(user);
+        loginUser = new UserBean();
+        loginUser.setUsername("username");
+        loginUser.setPassword("password");
+        loginUser = testUserDAO.authenticateUser(loginUser);
         assertNotNull(loginUser);
     }
 

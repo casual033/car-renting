@@ -6,8 +6,11 @@
     <p>Please login..</p>
 
     <form t:type="form" t:id="userLoginForm">
-        <input type="text" t:type="textField" t:value="username" t:validate="required,minlength=5,maxlength=12"/>
-        <input type="password" t:type="passwordField" t:value="password" t:validate="required,minlength=5,maxlength=12"/>
+       
+        <input type="text" t:type="textField" t:value="username"
+                t:validate="required,minlength=5,maxlength=12"/>
+        <input type="password" t:type="passwordField" t:value="password" t:id="password"
+                t:validate="required,minlength=5,maxlength=12"/>
         <input type="submit" value="Submit" />
     </form>
 

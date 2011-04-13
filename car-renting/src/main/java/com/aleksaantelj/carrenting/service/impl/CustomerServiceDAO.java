@@ -10,6 +10,7 @@ import com.aleksaantelj.carrenting.model.beans.CustomerBean;
 import com.aleksaantelj.carrenting.service.CustomerService;
 import java.util.List;
 import org.hibernate.Criteria;
+import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
@@ -17,7 +18,13 @@ import org.hibernate.criterion.Restrictions;
  *
  * @author Aleksa Antelj
  */
-public class CustomerServiceDAO extends UserServiceDAO implements CustomerService {
+public class CustomerServiceDAO implements CustomerService {
+
+    SessionFactory sessionFactory;
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     public Customer saveCustomer(Customer customer) {
         return (Customer) sessionFactory.getCurrentSession().

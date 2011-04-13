@@ -13,6 +13,7 @@ import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -26,20 +27,23 @@ public class UserServiceDAO implements UserService {
         this.sessionFactory = sessionFactory;
     }
 
-    
+    @Transactional
     public User saveUser(User user) {
         return (User) sessionFactory.getCurrentSession().get
                 (user.getClass(), sessionFactory.getCurrentSession().save(user));
     }
 
+    @Transactional
     public void deleteUser(User user) {
         sessionFactory.getCurrentSession().delete(user);
     }
 
+    @Transactional
     public void updateUser(User user) {
         sessionFactory.getCurrentSession().update(user);
     }
 
+    @Transactional
     public User getUser(int id) {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(UserBean.class).
                 add(Restrictions.eq("id",id));
@@ -55,6 +59,7 @@ public class UserServiceDAO implements UserService {
         return (List<User>)criteria.list();
     }
 
+    @Transactional
     public User authenticateUser(User user) {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(UserBean.class).
                 add(Restrictions.eq("username", user.getUsername())).

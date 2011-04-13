@@ -38,7 +38,7 @@ public class CustomerServiceDAOTest {
     public CustomerServiceDAOTest() {
         testCustomerDAO = new CustomerServiceDAO();
 
-        config.configure("hibernate.cfg.xml");
+        config.configure("hibernate.cfg.test.xml");
         config.addAnnotatedClass(CustomerBean.class);
         config.addAnnotatedClass(UserBean.class);
         config.addAnnotatedClass(RentBean.class);
