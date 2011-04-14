@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="carrenting Application Test Suite" verbose="1">
+    <test name="AllUnitTests">
+        <packages>
+            <package name="com.aleksaantelj.carrenting.*"/>
+        </packages>
+    </test>
+</suite>

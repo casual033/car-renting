@@ -7,11 +7,11 @@
 
     <form t:type="form" t:id="userLoginForm">
        
-        <input type="text" t:type="textField" t:value="username"
+        <input type="text" t:type="textField" t:value="username" t:id="username"
                 t:validate="required,minlength=5,maxlength=12"/>
         <input type="password" t:type="passwordField" t:value="password" t:id="password"
                 t:validate="required,minlength=5,maxlength=12"/>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" name="submit"/>
     </form>
 
 </html>
