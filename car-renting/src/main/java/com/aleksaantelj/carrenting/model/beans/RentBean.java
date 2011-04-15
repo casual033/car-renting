@@ -5,6 +5,8 @@
 
 package com.aleksaantelj.carrenting.model.beans;
 
+import com.aleksaantelj.carrenting.model.Car;
+import com.aleksaantelj.carrenting.model.Customer;
 import com.aleksaantelj.carrenting.model.Rent;
 import java.io.Serializable;
 import java.util.Date;
@@ -78,8 +80,8 @@ public class RentBean implements Rent, Serializable {
         return car;
     }
 
-    public void setCar(CarBean car) {
-        this.car = car;
+    public void setCar(Car car) {
+        this.car =  (CarBean) car;
     }
 
     @ManyToOne(targetEntity=CustomerBean.class)
@@ -88,8 +90,10 @@ public class RentBean implements Rent, Serializable {
         return customer;
     }
 
-    public void setCustomer(CustomerBean customer) {
-        this.customer = customer;
+    public void setCustomer(Customer customer) {
+        this.customer =  (CustomerBean) customer;
     }
+
+
 
 }

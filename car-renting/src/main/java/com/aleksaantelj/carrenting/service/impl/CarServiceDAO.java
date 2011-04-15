@@ -51,12 +51,8 @@ public class CarServiceDAO implements CarService {
     }
 
     public List<Car> getAllCars() {
-        Criteria criteria = null;
-        try {
-            criteria = sessionFactory.getCurrentSession().createCriteria(Class.forName("CarBean")).addOrder(Order.asc("brand"));
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(CarServiceDAO.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        Criteria criteria = sessionFactory.getCurrentSession().createCriteria(CarBean.class).
+                addOrder(Order.asc("brand"));
         return (List<Car>)criteria.list();
     }
 

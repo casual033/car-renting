@@ -30,7 +30,7 @@ public class RentServiceDAO implements RentService {
 
     public Rent saveRent(Rent rent) {
         return (Rent) sessionFactory.getCurrentSession().
-                get(rent.getClass(), sessionFactory.getCurrentSession().save(rent));
+                get(RentBean.class, sessionFactory.getCurrentSession().save(rent));
     }
 
     public void deleteRent(Rent rent) {
