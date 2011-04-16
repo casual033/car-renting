@@ -15,6 +15,7 @@ import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -28,19 +29,23 @@ public class CarServiceDAO implements CarService {
         this.sessionFactory = sessionFactory;
     }
 
+    @Transactional
     public Car saveCar(Car car) {
         return (Car) sessionFactory.getCurrentSession().
                 get(car.getClass(), sessionFactory.getCurrentSession().save(car));
     }
 
+    @Transactional
     public void deleteCar(Car car) {
         sessionFactory.getCurrentSession().delete(car);
     }
 
+    @Transactional
     public void updateCar(Car car) {
         sessionFactory.getCurrentSession().update(car);
     }
 
+    @Transactional
     public Car getCar(int id) {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(CarBean.class).
                 add(Restrictions.eq("id",id));
@@ -50,6 +55,8 @@ public class CarServiceDAO implements CarService {
         return null;
     }
 
+
+    @Transactional
     public List<Car> getAllCars() {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(CarBean.class).
                 addOrder(Order.asc("brand"));

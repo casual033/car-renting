@@ -1,4 +1,4 @@
-package com.aleksaantelj.carrenting.model.beans;
+package com.aleksaantelj.carrenting.test.selenium;
 
 import org.apache.tapestry5.test.SeleniumTestCase;
 import org.testng.annotations.Test;

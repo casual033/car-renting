@@ -15,6 +15,7 @@ import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -28,19 +29,23 @@ public class RentServiceDAO implements RentService {
         this.sessionFactory = sessionFactory;
     }
 
+    @Transactional
     public Rent saveRent(Rent rent) {
         return (Rent) sessionFactory.getCurrentSession().
                 get(RentBean.class, sessionFactory.getCurrentSession().save(rent));
     }
 
+    @Transactional
     public void deleteRent(Rent rent) {
         sessionFactory.getCurrentSession().delete(rent);
     }
 
+    @Transactional
     public void updateRent(Rent rent) {
         sessionFactory.getCurrentSession().update(rent);
     }
 
+    @Transactional
     public Rent getRent(int id) {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(RentBean.class).
                 add(Restrictions.eq("id",id));
@@ -50,18 +55,22 @@ public class RentServiceDAO implements RentService {
         return null;
     }
 
+
+    @Transactional
     public List<Rent> getAllRents() {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(RentBean.class).
                 addOrder(Order.asc("username"));
         return (List<Rent>)criteria.list();
     }
 
+    @Transactional
     public List<Rent> getRentsByCustomer(Customer customer) {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(RentBean.class).
                 add(Restrictions.eq("customer", customer)).addOrder(Order.asc("issueDate"));
         return (List<Rent>)criteria.list();
     }
 
+    @Transactional
     public List<Rent> getRentsByCar(Car car) {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(RentBean.class).
                 add(Restrictions.eq("car", car)).addOrder(Order.asc("issueDate"));

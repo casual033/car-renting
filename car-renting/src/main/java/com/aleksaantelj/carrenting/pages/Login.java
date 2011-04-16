@@ -5,8 +5,10 @@
 
 package com.aleksaantelj.carrenting.pages;
 
+import com.aleksaantelj.carrenting.model.Customer;
 import com.aleksaantelj.carrenting.model.User;
 import com.aleksaantelj.carrenting.model.beans.UserBean;
+import com.aleksaantelj.carrenting.service.CustomerService;
 import com.aleksaantelj.carrenting.service.UserService;
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.Persist;
@@ -24,6 +26,11 @@ public class Login {
 
     @SessionState
     private User user;
+    private boolean userExists;
+
+    @SessionState
+    private Customer customer;
+    private boolean customerExists;
 
     @Persist
     @Property
@@ -32,10 +39,12 @@ public class Login {
     @Property
     private String password;
 
-    private boolean userExists;
+   
 
     @Inject
     private UserService userService;
+    @Inject
+    private CustomerService customerService;
 
     @Component
     private Form userLoginForm;
@@ -56,6 +65,7 @@ public class Login {
             userLoginForm.recordError(passwordField, "Wrong username and password combination!");
         } else {
             user = loginUser;
+            customer = customerService.getCustomer(user.getId());
         }
     }
 

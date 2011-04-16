@@ -13,6 +13,7 @@ import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -26,19 +27,23 @@ public class CustomerServiceDAO implements CustomerService {
         this.sessionFactory = sessionFactory;
     }
 
+    @Transactional
     public Customer saveCustomer(Customer customer) {
         return (Customer) sessionFactory.getCurrentSession().
                 get(customer.getClass(), sessionFactory.getCurrentSession().save(customer));
     }
 
+    @Transactional
     public void deleteCustomer(Customer customer) {
         sessionFactory.getCurrentSession().delete(customer);
     }
 
+    @Transactional
     public void updateCustomer(Customer customer) {
         sessionFactory.getCurrentSession().update(customer);
     }
 
+    @Transactional
     public Customer getCustomer(int id) {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(CustomerBean.class).
                 add(Restrictions.eq("id",id));
@@ -48,6 +53,7 @@ public class CustomerServiceDAO implements CustomerService {
         return null;
     }
 
+    @Transactional
     public List<Customer> getAllCustomers() {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(CustomerBean.class).
                 addOrder(Order.asc("username"));

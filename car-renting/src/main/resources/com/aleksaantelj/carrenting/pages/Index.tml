@@ -5,4 +5,9 @@
 
     <p> Welcome to the Index page !!! </p>
 
+    <ul t:type="Loop" t:source="carService.getAllCars()" t:value="car">
+	<li>Car: <a t:type="PageLink" t:page="Contact" t:context="car.registrationNumber">
+            ${car.brand} ${car.model}</a></li>
+</ul>
+
 </html>
