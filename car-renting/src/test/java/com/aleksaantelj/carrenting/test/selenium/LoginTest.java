@@ -63,7 +63,7 @@ public class LoginTest extends SeleniumTestCase {
 	  type("password","customer");
 	  click("submit");
 	  waitForPageToLoad();
-	  assertTextPresent("Welcome");
+	  assertTextPresent("Available cars");
   }
   
 }
