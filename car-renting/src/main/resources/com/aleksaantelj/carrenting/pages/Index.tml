@@ -4,9 +4,12 @@
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
 
-    <ul t:type="Loop" t:source="carService.getAllCars()" t:value="car">
-	<li>Car: <a t:type="PageLink" t:page="CarDetails" t:context="car.id">
-            ${car.brand} ${car.model}</a> ${car.registrationNumber}</li>
-    </ul>
+    <table>
+        <tr t:type="Loop" t:source="carService.getAllCars()" t:value="car">
+            <td><a t:type="PageLink" t:page="CarDetails" t:context="car.id">
+                ${car.brand} ${car.model}</a></td>
+            <td>${car.registrationNumber}</td>
+        </tr>
+    </table>
 
 </html>
