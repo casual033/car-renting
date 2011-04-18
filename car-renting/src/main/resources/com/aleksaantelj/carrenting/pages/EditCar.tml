@@ -1,0 +1,31 @@
+<html t:type="layout" title="Update car details"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <form t:type="form" t:id="updateCarForm">
+
+        <t:errors/>
+
+        <t:label t:for="brand">Brand </t:label>
+        <input type="text" t:type="textField" t:value="car.brand" t:id="brand"
+                t:validate="required"/><br/>
+        <t:label t:for="model">Model </t:label>
+        <input type="text" t:type="textField" t:value="car.model" t:id="model"
+                t:validate="required"/><br/>
+
+        <t:label t:for="registration">Registration </t:label>
+        <input type="text" t:type="textField" t:value="car.registrationNumber" t:id="registration"
+                t:validate="required"/><br/>
+        <t:label t:for="buildYear">Build year </t:label>
+        <input type="text" t:type="textField" t:value="car.buildYear" t:id="buildYear"
+                t:validate="required"/><br/>
+
+        <t:label t:for="dailyPrice">Price </t:label>
+        <input type="text" t:type="textField" t:value="car.dailyPrice" t:id="dailyPrice"
+                t:validate="required"/><br/>
+
+
+        <input type="submit" value="Submit" name="submit"/>
+    </form>
+
+</html>

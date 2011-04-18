@@ -18,12 +18,14 @@
 
     <t:if test="userExists">
         <t:if test="user.employee">
-            You are employee !!!
+            <a t:type="PageLink" t:page="EditCar" t:context="car.id">
+                Update car details </a>
         </t:if>
     </t:if>
 
     <t:if test="customerExists">
-        You are a customer !!!
+        <a t:type="PageLink" t:page="EditCar" t:context="car.id">
+                Rent this car </a>
     </t:if>
 
 </html>
