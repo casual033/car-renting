@@ -1,4 +1,4 @@
-As a user I want to be able to log in, and log out..
+As a user I want to be able to log in..
 
 Acceptance tests
 - User wants to see fields for username and password and a submit button
