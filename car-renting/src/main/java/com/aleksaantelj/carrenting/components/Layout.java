@@ -20,12 +20,17 @@ public class Layout
     private String pageName;
 
     @Property
-    @Parameter(defaultPrefix = BindingConstants.LITERAL)
-    private String sidebarTitle;
+    @Parameter(required=false, value="false", defaultPrefix = BindingConstants.LITERAL)
+    private boolean isEmployee;
 
     @Property
-    @Parameter(defaultPrefix = BindingConstants.LITERAL)
-    private Block sidebar;
+    @Parameter(required = false, value="false",defaultPrefix = BindingConstants.LITERAL)
+    private boolean isCustomer;
+
+    @Property
+    @Parameter(required = false, value="true",defaultPrefix = BindingConstants.LITERAL)
+    private boolean userMenu;
+
 
     @Inject
     private ComponentResources resources;

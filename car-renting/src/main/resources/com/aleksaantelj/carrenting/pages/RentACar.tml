@@ -16,18 +16,18 @@
             </li>
     </ul>
 
-    <t:if test="userExists">
-        <t:if test="user.employee">
-            <a t:type="PageLink" t:page="EditCar" t:context="car.id">
-                Update car details </a>
-        </t:if>
-    </t:if>
+    <form t:type="form" t:id="rentACarForm">
 
-    <t:if test="customerExists">
-        <a t:type="PageLink" t:page="RentACar" t:context="car.id">
-                Rent this car </a>
-    </t:if>
+        <t:errors/>
 
-   
+        <t:label t:for="issueDate">Issue date </t:label>
+            <input type="text" t:type="dateField" t:value="issueDate" t:id="issueDate"
+                    t:validate="required"/><br/>
+            <t:label t:for="returnDate">Return date </t:label>
+            <input type="text" t:type="dateField" t:value="returnDate" t:id="returnDate"
+                    t:validate="required"/><br/>
+
+            <input type="submit" value="Submit" name="submit"/>
+    </form>
 
 </html>

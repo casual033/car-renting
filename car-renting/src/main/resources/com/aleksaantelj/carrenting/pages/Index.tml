@@ -1,4 +1,5 @@
 <html t:type="layout" title="Available cars"
+      userMenu="true"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
@@ -11,5 +12,8 @@
             <td>${car.registrationNumber}</td>
         </tr>
     </table>
+
+   
+
 
 </html>

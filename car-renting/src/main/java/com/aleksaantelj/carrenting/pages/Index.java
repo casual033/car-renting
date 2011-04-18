@@ -22,6 +22,7 @@ public class Index
 
     @SessionState
     private Customer customer;
+    @Property
     private boolean customerExists;
 
     @Inject

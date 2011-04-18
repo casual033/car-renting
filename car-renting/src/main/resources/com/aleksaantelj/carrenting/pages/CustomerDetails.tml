@@ -1,0 +1,29 @@
+<html t:type="layout" title="Car Details"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+    <ul>
+        <li> Customer: ${customer.username}
+            </li>
+        <li> First name ${customer.firstName}
+            </li>
+        <li> Last name: ${customer.lastName}
+            </li>
+        <li> Email: ${customer.email}
+            </li>
+        <li> JMBG: ${customer.jmbg}
+            </li>
+        <li> Address: ${customer.homeAddress}
+            </li>
+    </ul>
+
+
+    <t:if test="customerExists">
+        <a t:type="PageLink" t:page="RentACar" t:context="customer.id">
+                Update my profile </a>
+    </t:if>
+
+   
+
+</html>
