@@ -17,6 +17,7 @@ public class Index
 {
 
     @SessionState
+    @Property
     private User user;
     private boolean userExists;
 

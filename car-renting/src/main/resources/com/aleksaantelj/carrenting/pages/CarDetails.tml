@@ -3,14 +3,17 @@
       xmlns:p="tapestry:parameter">
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
+        <t:if test="userExists">
+            <t:usermenu t:isEmployee="${user.employee}" t:isCustomer="${customerExists}"
+                t:userId="${user.id}"/>
+        </t:if>
+
     <ul>
         <li> Car: ${car.brand} ${car.model}
             </li>
         <li> Registration: ${car.registrationNumber}
             </li>
         <li> Build year: ${car.buildYear}
-            </li>
-        <li> Category: ${car.category.toString()}
             </li>
         <li> Daily price: ${car.dailyPrice}
             </li>

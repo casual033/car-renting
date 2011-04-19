@@ -19,17 +19,17 @@ public class Layout
     @Property
     private String pageName;
 
-    @Property
-    @Parameter(required=false, value="false", defaultPrefix = BindingConstants.LITERAL)
-    private boolean isEmployee;
-
-    @Property
-    @Parameter(required = false, value="false",defaultPrefix = BindingConstants.LITERAL)
-    private boolean isCustomer;
-
-    @Property
-    @Parameter(required = false, value="true",defaultPrefix = BindingConstants.LITERAL)
-    private boolean userMenu;
+//    @Property
+//    @Parameter(required=false, value="false", defaultPrefix = BindingConstants.LITERAL)
+//    private boolean isEmployee;
+//
+//    @Property
+//    @Parameter(required = false, value="false",defaultPrefix = BindingConstants.LITERAL)
+//    private boolean isCustomer;
+//
+//    @Property
+//    @Parameter(required = false, value="true",defaultPrefix = BindingConstants.LITERAL)
+//    private boolean userMenu;
 
 
     @Inject

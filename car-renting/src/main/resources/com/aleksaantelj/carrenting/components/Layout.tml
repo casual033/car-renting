@@ -36,29 +36,7 @@ Description: A Web 2.0 design with fluid width suitable for blogs and small webs
         <!-- end header -->
         <!-- start page -->
         <div id="page">
-            <!-- start sidebar -->
-            <div id="sidebar">
-                <t:if test="userMenu">
-                    <h2>User Menu</h2>
-                    <ul>
-
-                        <li t:type="if" test="isEmployee">
-                            <a t:type="PageLink" t:page="AddCar" >
-                                Add new car</a></li>
-                        <li t:type="if" test="isEmployee">ss</li>
-                        <li t:type="if" test="isEmployee">dd</li>
-
-                        <li t:type="if" test="isCustomer">
-                            <a t:type="PageLink" t:page="AddCar">
-                                My Profile</a></li>
-                        <li t:type="if" test="isCustomer">a</li>
-                        <li t:type="if" test="isCustomer">s</li>
-
-                        <li>Log out..</li>
-                    </ul>
-                </t:if>
-            </div>
-            <!-- end sidebar -->
+           
             <!-- start content -->
             <div id="content">
                 <div class="post">

@@ -1,0 +1,7 @@
+<html t:type="layout" title="About car-renting"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <p>About car-renting application ...</p>
+
+</html>

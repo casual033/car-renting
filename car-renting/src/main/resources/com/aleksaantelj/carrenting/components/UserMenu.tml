@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+            <!-- start sidebar -->
+            <div id="sidebar">
+                <ul>
+                    <h2>User Menu</h2>
+                    <t:if test="isEmployee">
+                    
+
+                        <li><a t:type="PageLink" t:page="AddCar" >
+                                Add new car</a></li>
+                        <li>ss</li>
+                        <li>dd</li>
+                    
+                    </t:if>
+
+                    <t:if test="isCustomer">
+                    
+                        <li><a t:type="PageLink" t:page="CustomerDetails" t:context="userId">
+                                My Profile</a></li>
+                        <li>a</li>
+                        <li>s</li>
+                    
+                    </t:if>
+                    
+                    
+                        <li><a t:type="PageLink" t:page="Logout" >
+                                Logout</a></li>
+                    </ul>
+
+                    
+              
+            </div>
+            <!-- end sidebar -->
+
+
+</html>

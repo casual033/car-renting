@@ -1,6 +1,9 @@
-<html t:type="layout" title="Update car details"
+<html t:type="layout" title="Add new car"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
+
+    <t:usermenu t:isEmployee="${user.employee}"
+        t:userId="${user.id}"/>
 
     <form t:type="form" t:id="addCarForm">
 

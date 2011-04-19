@@ -68,7 +68,7 @@ public class AddCar {
         return Index.class;
     }
 
-    Object onActivate(int id) {
+    Object onActivate() {
         if (userExists) {
             if(user.isEmployee()) {
                 return null;

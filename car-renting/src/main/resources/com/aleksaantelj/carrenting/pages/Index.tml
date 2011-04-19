@@ -1,9 +1,10 @@
 <html t:type="layout" title="Available cars"
-      userMenu="true"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
+    <t:usermenu t:isEmployee="${user.employee}" t:isCustomer="${customerExists}"
+            t:userId="${user.id}"/>
 
     <table>
         <tr t:type="Loop" t:source="carService.getAllCars()" t:value="car">
@@ -13,7 +14,8 @@
         </tr>
     </table>
 
-   
 
+   
+    
 
 </html>

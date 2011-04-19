@@ -1,8 +1,12 @@
-<html t:type="layout" title="Car Details"
+<html t:type="layout" title="Customer Details"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
+        <t:if test="userExists">
+            <t:usermenu t:isEmployee="${user.employee}" t:isCustomer="${customerExists}"
+                t:userId="${user.id}"/>
+        </t:if>
     <ul>
         <li> Customer: ${customer.username}
             </li>

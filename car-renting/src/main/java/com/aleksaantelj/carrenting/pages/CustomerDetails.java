@@ -19,6 +19,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 public class CustomerDetails {
 
     @SessionState
+    @Property
     private User user;
     @Property
     private boolean userExists;

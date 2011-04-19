@@ -367,3 +367,13 @@ a:hover {
 #footer .legal a {
     padding: 0;
 }
+
+label {
+  text-align: right;
+  width: 100px;
+  display: block;
+  float: left;
+  clear: left;
+  margin-right: 3px;
+  cursor: pointer
+}
