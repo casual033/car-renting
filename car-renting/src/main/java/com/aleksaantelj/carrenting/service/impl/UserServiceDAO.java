@@ -70,4 +70,12 @@ public class UserServiceDAO implements UserService {
         return (User) list.get(0);
     }
 
+    @Transactional
+    public List<User> getAllEmployees() {
+        Criteria criteria = sessionFactory.getCurrentSession().createCriteria(UserBean.class).
+                add(Restrictions.eq("employee", true)).
+                addOrder(Order.asc("username"));
+        return (List<User>)criteria.list();
+    }
+
 }

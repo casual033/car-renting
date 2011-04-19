@@ -23,6 +23,8 @@ public interface UserService {
 
     List<User> getAllUsers();
 
+    List<User> getAllEmployees();
+
     User authenticateUser(User user);
 
 }

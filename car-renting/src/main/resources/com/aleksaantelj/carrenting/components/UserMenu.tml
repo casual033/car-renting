@@ -11,8 +11,10 @@
 
                         <li><a t:type="PageLink" t:page="AddCar" >
                                 Add new car</a></li>
-                        <li>ss</li>
-                        <li>dd</li>
+                        <li><a t:type="PageLink" t:page="Customers" >
+                                Customer list</a></li>
+                        <li><a t:type="PageLink" t:page="Employees" >
+                                Employees list</a></li>
                     
                     </t:if>
 

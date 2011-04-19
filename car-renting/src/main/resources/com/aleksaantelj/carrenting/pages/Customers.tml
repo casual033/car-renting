@@ -1,0 +1,20 @@
+<html t:type="layout" title="Registered customers"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+    <t:usermenu t:isEmployee="${user.employee}" 
+            t:userId="${user.id}"/>
+
+    <table>
+        <tr t:type="Loop" t:source="customerService.getAllCustomers()" t:value="customer">
+            <td><a t:type="PageLink" t:page="CustomerDetails" t:context="customer.id">
+                ${customer.firstName} ${customer.lastName}</a></td>
+        </tr>
+    </table>
+
+
+   
+    
+
+</html>
