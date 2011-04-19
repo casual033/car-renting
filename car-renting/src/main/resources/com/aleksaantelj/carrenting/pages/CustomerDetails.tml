@@ -28,6 +28,28 @@
                 Update my profile </a>
     </t:if>
 
+    <p></p>
+
+    <table>
+        <caption>Customer rents</caption>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Registration</th>
+            <th>Issue date</th>
+            <th>Return date</th>
+            <th>Returned</th>
+        </tr>
+        <tr t:type="Loop" t:source="rentService.getRentsByCustomer(currentCustomer)" t:value="rent">
+            <td>${rent.car.brand} </td>
+            <td>${rent.car.model}</td>
+            <td>${rent.car.registrationNumber}</td>
+            <td>${rent.issueDate}</td>
+            <td>${rent.returnDate}</td>
+            <td>${rent.returned}</td>
+        </tr>
+    </table>
+
    
 
 </html>

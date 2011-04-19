@@ -116,4 +116,13 @@ public class UserServiceDAOTest {
         }
     }
 
+    @Test
+    public void testGetAllEmployees() {
+        List<User> userList = testUserDAO.getAllEmployees();
+        for (Iterator<User> it = userList.iterator(); it.hasNext();) {
+            User user = it.next();
+            assertNotNull(user);
+        }
+    }
+
 }

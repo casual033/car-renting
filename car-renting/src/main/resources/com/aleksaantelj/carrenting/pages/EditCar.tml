@@ -30,7 +30,11 @@
                 t:validate="required"/><br/>
 
 
-        <input type="submit" value="Submit" name="submit"/>
+        <input type="submit" value="Update" name="submit"/>
+    </form>
+
+    <form t:type="form" t:id="deleteCarForm">
+        <input type="submit" value="Delete" name="submit"/>
     </form>
 
 </html>

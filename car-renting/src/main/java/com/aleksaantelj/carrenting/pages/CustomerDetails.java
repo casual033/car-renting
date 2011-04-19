@@ -6,8 +6,12 @@
 package com.aleksaantelj.carrenting.pages;
 
 import com.aleksaantelj.carrenting.model.Customer;
+import com.aleksaantelj.carrenting.model.Rent;
 import com.aleksaantelj.carrenting.model.User;
 import com.aleksaantelj.carrenting.service.CustomerService;
+import com.aleksaantelj.carrenting.service.RentService;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.ioc.annotations.Inject;
@@ -33,8 +37,15 @@ public class CustomerDetails {
     @Property
     private Customer currentCustomer;
 
+    @Property
+    private Rent rent;
+
     @Inject
     private CustomerService customerService;
+
+    @Inject
+    @Property
+    private RentService rentService;
 
     public Object onActivate(int id) {
         if(userExists) {
@@ -47,6 +58,10 @@ public class CustomerDetails {
             return null;
         }
         return Index.class;
+    }
+
+    public DateFormat getDateFormat() {
+        return new SimpleDateFormat("dd/MM/yyyy");
     }
 
     int onPassivate() {

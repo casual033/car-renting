@@ -49,6 +49,11 @@ public class EditCar {
         return Index.class;
     }
 
+    Object onSuccessFromDeleteCarForm() {
+        carService.deleteCar(car);
+        return Index.class;
+    }
+
     Object onActivate(int id) {
         if (userExists) {
             if(user.isEmployee()) {

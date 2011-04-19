@@ -8,7 +8,7 @@
 
     <table>
         <tr t:type="Loop" t:source="userService.getAllEmployees()" t:value="currentUser">
-            <td><a t:type="PageLink" t:page="#" t:context="currentUser.id">
+            <td><a t:type="PageLink" t:page="Index" t:context="currentUser.id">
                 ${currentUser.username}</a></td>
         </tr>
     </table>
