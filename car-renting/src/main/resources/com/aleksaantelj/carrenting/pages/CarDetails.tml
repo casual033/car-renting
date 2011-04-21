@@ -31,6 +31,30 @@
                 Rent this car </a>
     </t:if>
 
-   
+    <br/><br/>
+
+   <t:if test="userExists">
+        <t:if test="user.employee">
+            <table>
+                <caption>Car rents</caption>
+                <tr>
+                    <th>User</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Issue date</th>
+                    <th>Return date</th>
+                    <th>Returned</th>
+                </tr>
+                <tr t:type="Loop" t:source="rentService.getRentsByCar(car)" t:value="rent">
+                    <td>${rent.customer.username} </td>
+                    <td>${rent.customer.firstName}</td>
+                    <td>${rent.customer.lastName}</td>
+                    <td>${rent.issueDate}</td>
+                    <td>${rent.returnDate}</td>
+                    <td>${rent.returned}</td>
+                </tr>
+            </table>
+        </t:if>
+    </t:if>
 
 </html>

@@ -11,10 +11,13 @@
 
                         <li><a t:type="PageLink" t:page="AddCar" >
                                 Add new car</a></li>
+                        <li><a t:type="PageLink" t:page="AddEmployee" >
+                                Add employee</a></li>
                         <li><a t:type="PageLink" t:page="Customers" >
                                 Customer list</a></li>
                         <li><a t:type="PageLink" t:page="Employees" >
                                 Employees list</a></li>
+
                     
                     </t:if>
 
@@ -22,7 +25,8 @@
                     
                         <li><a t:type="PageLink" t:page="CustomerDetails" t:context="userId">
                                 My Profile</a></li>
-                        <li>a</li>
+                        <li><a t:type="PageLink" t:page="UpdateCustomer" t:context="userId">
+                                Update my details</a></li>
                         <li>s</li>
                     
                     </t:if>

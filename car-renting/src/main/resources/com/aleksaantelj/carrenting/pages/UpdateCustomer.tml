@@ -1,0 +1,37 @@
+<html t:type="layout" title="Update account"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <form t:type="form" t:id="updateCustomerForm">
+
+        <t:errors/>
+
+        <t:label t:for="username">Username </t:label>
+        <input type="text" t:type="textField" t:value="customer.username" t:id="username"
+                t:validate="required,minlength=5,maxlength=12"/><br/>
+                <t:label t:for="password">Password </t:label>
+        <input type="password" t:type="passwordField" t:value="password" t:id="password"
+                t:validate="required,minlength=5,maxlength=12"/><br/>
+
+        <t:label t:for="firstName">First name </t:label>
+        <input type="text" t:type="textField" t:value="customer.firstName" t:id="firstName"
+                t:validate="required,maxlength=50"/><br/>
+        <t:label t:for="lastName">Last name </t:label>
+        <input type="text" t:type="textField" t:value="customer.lastName" t:id="lastName"
+                t:validate="required,maxlength=50"/><br/>
+
+        <t:label t:for="email">Email </t:label>
+        <input type="text" t:type="textField" t:value="customer.email" t:id="email"
+                t:validate="required"/><br/>
+        <t:label t:for="address">Home address</t:label>
+        <input type="text" t:type="textField" t:value="customer.homeAddress" t:id="address"
+                t:validate="required,maxlength=100"/><br/>
+
+        <t:label t:for="jmbg">JMBG </t:label>
+        <input type="text" t:type="textField" t:value="customer.jmbg" t:id="jmbg"
+                t:validate="required,maxlength=20"/><br/><br/>
+
+        <input type="submit" value="Submit" name="submit"/>
+    </form>
+
+</html>

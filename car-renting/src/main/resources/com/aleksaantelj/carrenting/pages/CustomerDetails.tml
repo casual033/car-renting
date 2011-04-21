@@ -24,7 +24,7 @@
 
 
     <t:if test="customerExists">
-        <a t:type="PageLink" t:page="RentACar" t:context="customer.id">
+        <a t:type="PageLink" t:page="CustomerDetails" t:context="customer.id">
                 Update my profile </a>
     </t:if>
 
@@ -49,7 +49,6 @@
             <td>${rent.returned}</td>
         </tr>
     </table>
-
    
 
 </html>
