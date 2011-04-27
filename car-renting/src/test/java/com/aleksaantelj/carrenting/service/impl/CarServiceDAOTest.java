@@ -93,7 +93,7 @@ public class CarServiceDAOTest {
         assertEquals(car.getRegistrationNumber(), fetchedCar.getRegistrationNumber());
     }
 
-    @Test(dependsOnMethods="testUpdateCar")
+    @Test(dependsOnMethods="testGetCarAvailable")
     public void testDeleteCar() {
         car = testCarDAO.saveCar(car);
         assertNotNull(car);
@@ -109,6 +109,12 @@ public class CarServiceDAOTest {
             Car car = it.next();
             assertNotNull(car);
         }
+    }
+
+    @Test(dependsOnMethods="testUpdateCar")
+    public void testGetCarAvailable() {
+        boolean carAvailable = testCarDAO.getCarAvailable(car);
+        assertEquals(carAvailable, true);
     }
 
 

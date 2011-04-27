@@ -6,12 +6,15 @@
 package com.aleksaantelj.carrenting.service.impl;
 
 import com.aleksaantelj.carrenting.model.Car;
+import com.aleksaantelj.carrenting.model.Rent;
 import com.aleksaantelj.carrenting.model.beans.CarBean;
 import com.aleksaantelj.carrenting.service.CarService;
+import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.hibernate.Criteria;
+import org.hibernate.Hibernate;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
@@ -61,6 +64,18 @@ public class CarServiceDAO implements CarService {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(CarBean.class).
                 addOrder(Order.asc("brand"));
         return (List<Car>)criteria.list();
+    }
+
+    @Transactional
+    public boolean getCarAvailable(Car car) {
+        Rent rent;
+        Iterator<Rent> iterator = car.getCarRents().iterator();
+        while(iterator.hasNext()) {
+            rent = iterator.next();
+            if(!rent.isReturned())
+                return false;
+        }
+        return true;
     }
 
 }

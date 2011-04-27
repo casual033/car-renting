@@ -24,4 +24,6 @@ public interface CarService {
 
     List<Car> getAllCars();
 
+    boolean getCarAvailable(Car car);
+
 }
