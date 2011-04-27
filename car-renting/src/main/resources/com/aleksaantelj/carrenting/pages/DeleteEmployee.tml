@@ -1,7 +1,6 @@
-<html t:type="layout" title="Contact"
+<html t:type="layout" title="Delete Employee"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
 
-    <p>Contact com.aleksaantelj ...</p>
 
 </html>

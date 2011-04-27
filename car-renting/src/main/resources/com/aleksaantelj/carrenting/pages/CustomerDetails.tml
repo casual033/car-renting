@@ -24,7 +24,7 @@
 
 
     <t:if test="customerExists">
-        <a t:type="PageLink" t:page="CustomerDetails" t:context="customer.id">
+        <a t:type="PageLink" t:page="UpdateCustomer" t:context="customer.id">
                 Update my profile </a>
     </t:if>
 

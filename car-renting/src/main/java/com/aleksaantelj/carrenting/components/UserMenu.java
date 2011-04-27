@@ -24,7 +24,7 @@ public class UserMenu {
     private boolean isCustomer;
 
     @Property
-    @Parameter(required = false, value="1",defaultPrefix = BindingConstants.LITERAL)
+    @Parameter(required = false, value="0",defaultPrefix = BindingConstants.LITERAL)
     private int userId;
 
 }

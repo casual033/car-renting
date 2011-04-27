@@ -27,7 +27,8 @@
                                 My Profile</a></li>
                         <li><a t:type="PageLink" t:page="UpdateCustomer" t:context="userId">
                                 Update my details</a></li>
-                        <li>s</li>
+                        <li><a t:type="PageLink" t:page="Index">
+                                Available cars</a></li>
                     
                     </t:if>
                     
