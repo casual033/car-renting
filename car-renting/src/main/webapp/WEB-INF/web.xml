@@ -7,13 +7,18 @@
 
 <web-app>
 
-    <display-name>car-renting Tapestry 5 Application</display-name>
+    <display-name>Car renting</display-name>
     <context-param>
         <!-- The only significant configuration for Tapestry 5, this informs Tapestry
 of where to look for pages, components and mixins. -->
         <param-name>tapestry.app-package</param-name>
         <param-value>com.aleksaantelj.carrenting</param-value>
     </context-param>
+    <context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+
     <filter>
         <filter-name>app</filter-name>
         <filter-class>org.apache.tapestry5.spring.TapestrySpringFilter</filter-class>

@@ -27,8 +27,13 @@
     </t:if>
 
     <t:if test="customerExists">
+        <t:if test="carAvailable">
         <a t:type="PageLink" t:page="RentACar" t:context="car.id">
                 Rent this car </a>
+        <p:else>
+            This car is rent out!
+        </p:else>
+        </t:if>
     </t:if>
 
     <br/><br/>
@@ -54,6 +59,16 @@
                     <td>${rent.returned}</td>
                 </tr>
             </table>
+
+            <t:if test="carAvailable">
+                This car is available..
+                <p:else>
+                    This car is rent out!
+                    <a t:type="PageLink" t:page="ReturnCar" t:context="car.id">
+                       Car retruned </a>
+                </p:else>
+            </t:if>
+
         </t:if>
     </t:if>
 

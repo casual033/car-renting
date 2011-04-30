@@ -30,4 +30,6 @@ public interface RentService {
 
     List<Rent> getRentsByCar(Car car);
 
+    public boolean getCarAvailable(Car car);
+
 }

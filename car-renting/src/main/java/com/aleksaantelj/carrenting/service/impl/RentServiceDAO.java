@@ -10,6 +10,7 @@ import com.aleksaantelj.carrenting.model.Customer;
 import com.aleksaantelj.carrenting.model.Rent;
 import com.aleksaantelj.carrenting.model.beans.RentBean;
 import com.aleksaantelj.carrenting.service.RentService;
+import java.util.Iterator;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
@@ -75,6 +76,19 @@ public class RentServiceDAO implements RentService {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(RentBean.class).
                 add(Restrictions.eq("car", car)).addOrder(Order.asc("issueDate"));
         return (List<Rent>)criteria.list();
+    }
+
+    @Transactional
+    public boolean getCarAvailable(Car car) {
+        Rent rent;
+        List<Rent> rents = getRentsByCar(car);
+        Iterator<Rent> iterator = rents.iterator();
+        while(iterator.hasNext()) {
+            rent = iterator.next();
+            if(!rent.isReturned())
+                return false;
+        }
+        return true;
     }
 
 }

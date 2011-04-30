@@ -45,8 +45,12 @@ public class CarDetails {
     @Property
     private RentService rentService;
 
+    @Property
+    private boolean carAvailable;
+
     public void onActivate(int id) {
         car = carService.getCar(id);
+        carAvailable = rentService.getCarAvailable(car);
     }
 
     int onPassivate() {
