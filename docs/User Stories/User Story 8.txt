@@ -1,1 +1,10 @@
 As a customer I want to be able to register..
+
+Acceptance tests
+- Customer wants Register link
+- Customer wants to see textfield for username, first, last name, email, jmbg, address and password
+- Customer wants to see submit button
+- Check with empty fields
+- Check with short username or password
+- Check with valid data
+- After registration try to log in

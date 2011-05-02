@@ -1,0 +1,5 @@
+As a employee I want to be able to delete other employees..
+
+Acceptance tests
+- Employee wants a delete employee link
+- Check if the employee is deleted

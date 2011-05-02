@@ -1,1 +1,5 @@
 As a user I want to be able to log out..
+
+Acceptance tests
+- User wants a log out link
+- Log out and check if you can access protected pages

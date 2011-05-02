@@ -1,1 +1,5 @@
 As an operator I want to be able to see list of all customers..
+
+Acceptance tests
+- Operator wants a customers link
+- Operator wants to see First and Last name for every customer

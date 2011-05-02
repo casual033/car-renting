@@ -1,1 +1,6 @@
 As an operator I want to be able to see a history of car renting for a specific car..
+
+Acceptance tests
+- Operator wants to see customers username, first and last name for every car rent
+- Operator wants to see issue date, return date for every rent
+- Operator wants to see for every rent if the car is returned

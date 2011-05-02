@@ -22,6 +22,7 @@ public class UpdateCustomer {
     @SessionState
     @Property
     private Customer customer;
+    @Property
     private boolean customerExists;
 
     @Property

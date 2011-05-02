@@ -1,1 +1,8 @@
 As an operator I want to be able to add  new cars..
+
+Acceptance tests
+- Operator wants to see textfield for Brand, Model, Registration, Build year and Price
+- Operator wants to see submit button
+- Check with empty fields
+- Check with String values for Build year and Price
+- Check with valid data

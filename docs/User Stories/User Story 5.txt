@@ -1,1 +1,4 @@
 As an operator I want to be able to se details of a customer..
+
+Acceptance tests
+- Operator wants to see customer: username, first, last name,email,jmbg and address

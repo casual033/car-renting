@@ -1,1 +1,5 @@
 As a employee I want to see list of all employees..
+
+Acceptance tests
+- Employee wants a employees link
+- Employee wants to see username for every employee

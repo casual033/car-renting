@@ -1,1 +1,6 @@
 As a user I want to be able to see my details..
+
+Acceptance tests
+- User wants a MyProfile link
+- User wants to see his username, first, last name,email,jmbg and address
+

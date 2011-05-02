@@ -2,10 +2,9 @@
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
 
-    <t:if test="userExists">
-        <t:usermenu t:isEmployee="${user.employee}" t:isCustomer="${customerExists}"
-            t:userId="${user.id}"/>
-    </t:if>
+
+    <t:usermenu t:isCustomer="${customerExists}"/>
+
 
     <form t:type="form" t:id="updateCustomerForm">
 

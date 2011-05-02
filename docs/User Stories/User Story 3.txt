@@ -1,2 +1,6 @@
 As an operator I want to be able to delete cars..
 Note: delete all references..
+
+Acceptance tests
+- Operator wants a delete button
+- Chekck if the car is deleted (check if it is in the car list)

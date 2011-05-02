@@ -1,1 +1,5 @@
 As a employee I want to be able to mark rent out car as returned..
+
+Acceptance tests
+- Employee wants to see Return car link
+- Check if the car is listed as availible after clicking
