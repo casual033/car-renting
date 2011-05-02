@@ -32,4 +32,6 @@ public interface RentService {
 
     public boolean getCarAvailable(Car car);
 
+    public void returnCar(Car car);
+
 }

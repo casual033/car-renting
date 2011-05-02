@@ -60,6 +60,8 @@
                 </tr>
             </table>
 
+            <br/>
+
             <t:if test="carAvailable">
                 This car is available..
                 <p:else>
