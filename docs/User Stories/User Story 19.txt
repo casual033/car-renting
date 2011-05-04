@@ -1,0 +1,8 @@
+As an employee I want to be able to update car details..
+
+Acceptance tests
+- Employee wants a textfield for brand, model, registration,build year, and price
+- Employee wants a submit button
+- Check with empty fields
+- Check with invalid price and build year
+- Check with valid data

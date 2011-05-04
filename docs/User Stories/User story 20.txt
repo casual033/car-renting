@@ -1,0 +1,10 @@
+As an employee I want to be able to add new employees..
+
+Acceptance tests
+- Employee wants a textfield for username
+- Employee wants a textfield for password
+- Employee wants a submit button
+= Try with empty fields
+- Try with short username and password
+- Try with long username and password
+- Try with valid data

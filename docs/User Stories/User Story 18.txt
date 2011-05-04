@@ -1,0 +1,8 @@
+As a customer I want to be able to rent a car..
+
+Acceptance tests
+- Customer wants textfield for issue date
+- Customer wants textfield for return date
+- Customer wants a submit button
+- Try with invalid dates
+- Try with valid data

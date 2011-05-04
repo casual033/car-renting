@@ -1,0 +1,5 @@
+As a user I want to be able to see car details..
+
+Acceptance tests
+- User wants to see brand, model, registration,build year, and price for a cars 
+- User wants to know if the car is available for renting

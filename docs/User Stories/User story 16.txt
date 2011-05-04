@@ -1,0 +1,4 @@
+As a user I want to be able to see the list of all cars..
+
+Acceptance tests
+- User wants to see brand, model and registration for every car
