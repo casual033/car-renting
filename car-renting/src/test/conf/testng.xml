@@ -1,8 +1,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="car-renting Application Test Suite" annotations="1.5">
-    <test name="Unit Tests">
+    <test name="Beans Tests">
         <packages>
-            <package name="com.aleksaantelj.carrenting.*"/>
+            <package name="com.aleksaantelj.carrenting.model.beans"/>
         </packages>
+    </test>
+     <test name="Services Tests">
+        <packages>
+            <package name="com.aleksaantelj.carrenting.service.impl"/>
+        </packages>
+    </test>
+     <test name="Selenium Tests">
+        <classes>
+           <class name="com.aleksaantelj.carrenting.test.selenium.LoginSeleniumTest" />
+           <class name="com.aleksaantelj.carrenting.test.selenium.AddNewCarSeleniumTest" />
+    </classes>
     </test>
 </suite>

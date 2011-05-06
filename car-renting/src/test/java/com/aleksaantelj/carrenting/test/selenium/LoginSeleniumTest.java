@@ -1,9 +1,16 @@
 package com.aleksaantelj.carrenting.test.selenium;
 
 import org.apache.tapestry5.test.SeleniumTestCase;
+import org.springframework.test.context.ContextConfiguration;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class LoginTest extends SeleniumTestCase {
+public class LoginSeleniumTest extends SeleniumTestCase {
+	
+	@BeforeClass
+	  public void clearCookies() {
+		  deleteAllVisibleCookies();
+	  }
 	
   @Test
   public void checkPageLoad() {
@@ -65,5 +72,7 @@ public class LoginTest extends SeleniumTestCase {
 	  waitForPageToLoad();
 	  assertTextPresent("Available cars");
   }
+  
+  
   
 }

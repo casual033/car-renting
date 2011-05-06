@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="configLocation">
+            <value>classpath:hibernate.cfg.hsqldb.xml</value>
+        </property>
+        <property name="configurationClass">
+            <value>org.hibernate.cfg.AnnotationConfiguration</value>
+        </property>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.aleksaantelj.carrenting.model.beans.UserBean</value>
+                <value>com.aleksaantelj.carrenting.model.beans.CustomerBean</value>
+                <value>com.aleksaantelj.carrenting.model.beans.CarBean</value>
+                <value>com.aleksaantelj.carrenting.model.beans.RentBean</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="org.springframework.transaction.PlatformTransactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory" />
+        </property>
+    </bean>
+    <tx:annotation-driven transaction-manager="org.springframework.transaction.PlatformTransactionManager" />
+
+    <bean id="userService" class="com.aleksaantelj.carrenting.service.impl.UserServiceDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="carService" class="com.aleksaantelj.carrenting.service.impl.CarServiceDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="customerService" class="com.aleksaantelj.carrenting.service.impl.CustomerServiceDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="rentService" class="com.aleksaantelj.carrenting.service.impl.RentServiceDAO">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+
+</beans>
