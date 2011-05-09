@@ -43,7 +43,6 @@ public class AddEmployee {
         newEmployee.setEmployee(true);
         try {
             newEmployee = userService.saveUser(newEmployee);
-            user = newEmployee;
         } catch(Exception e){
             addEmployeeForm.recordError("Username already in use.");
         }

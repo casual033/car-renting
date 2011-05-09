@@ -73,6 +73,19 @@ public class LoginSeleniumTest extends SeleniumTestCase {
 	  assertTextPresent("Available cars");
   }
   
+  @Test(dependsOnMethods="checkLoginSuccess")
+  public void checkLogOut() {
+	  open(getBaseURL());
+	  waitForPageToLoad();
+	  assertTextPresent("Logout");
+	  click("link=Logout");
+	  waitForPageToLoad();
+	  assertTextPresent("Login page");
+	  check("username");
+	  check("password");
+	  check("submit");
+  }
+  
   
   
 }

@@ -10,7 +10,7 @@
         <tr t:type="Loop" t:source="userService.getAllEmployees()" t:value="currentUser">
             <td>${currentUser.username}</td>
             <td><a t:type="PageLink" t:page="DeleteEmployee" t:context="currentUser.id">
-                Delete employee</a></td>
+                Delete ${currentUser.username}</a></td>
         </tr>
     </table>
 
