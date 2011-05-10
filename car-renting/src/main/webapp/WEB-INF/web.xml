@@ -14,10 +14,7 @@ of where to look for pages, components and mixins. -->
         <param-name>tapestry.app-package</param-name>
         <param-value>com.aleksaantelj.carrenting</param-value>
     </context-param>
-    <context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/applicationContext.xml</param-value>
-	</context-param>
+
 
     <filter>
         <filter-name>app</filter-name>

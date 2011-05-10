@@ -11,9 +11,8 @@
         </packages>
     </test>
      <test name="Selenium Tests">
-        <classes>
-           <class name="com.aleksaantelj.carrenting.test.selenium.LoginSeleniumTest" />
-           <class name="com.aleksaantelj.carrenting.test.selenium.AddNewCarSeleniumTest" />
-    </classes>
+         <packages>
+            <package name="com.aleksaantelj.carrenting.test.selenium.*"/>
+        </packages>
     </test>
 </suite>
