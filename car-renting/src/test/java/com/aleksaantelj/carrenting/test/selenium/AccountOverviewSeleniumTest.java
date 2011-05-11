@@ -7,10 +7,10 @@ import org.testng.annotations.Test;
 
 public class AccountOverviewSeleniumTest extends SeleniumTestCase {
 	
-	@BeforeClass
-	  public void clearCookies() {
-          deleteAllVisibleCookies();
-	  }
+    @BeforeClass
+    public void clearCookies() {
+      deleteAllVisibleCookies();
+    }
 
     @Test
     public void checkPageLoad() {

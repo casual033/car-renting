@@ -1,6 +1,7 @@
 package com.aleksaantelj.carrenting.test.selenium;
 
 import org.apache.tapestry5.test.SeleniumTestCase;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
