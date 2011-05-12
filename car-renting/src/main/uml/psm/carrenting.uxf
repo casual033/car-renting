@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>56</x>
+      <y>408</y>
+      <w>240</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;POJO&gt;&gt;
+CustomerBean
+--
+-firstName:String
+-lastName:String
+-jmbg:String
+-homeAddress:String
+-email:String
+-rents:List&lt;Rent&gt;
+--
++getFirstName(): String
++getLastName(): String
++getJmbg(): String
++getHomeAddress(): String
++getEmail(): String
++getRents(): List&lt;Rent&gt;
++setFirstName(String firstName): void
++setLastName(String lastName): void
++setJmbg(String jmbg): void
++getHomeAddress(String homeAddress): void
++getEmail(String email): void
++getRents(List&lt;Rent&gt; rents): void
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>832</x>
+      <y>88</y>
+      <w>232</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Car
+--
++getBrand():String
++getModel():String
++getRegistrationNumber():String
++getBuildYear():int
++getDailyPrice():decimal
++getRents():List&lt;Rent&gt;
++setBrand():void
++setModel():void
++setRegistrationNumber():void
++setBuildYear():void
++setDailyPrice():void
++setRents():void
+bg=#57007F</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>832</x>
+      <y>408</y>
+      <w>216</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;POJO&gt;&gt;
+CarBean
+--
+-brand:String
+-model:String
+-registrationNumber:String
+-buildYear:int
+-dailyPrice:decimal
+-rents:List&lt;Rent&gt;
+--
++getBrand():String
++getModel():String
++getRegistrationNumber():String
++getBuildYear():int
++getDailyPrice():decimal
++getRents():List&lt;Rent&gt;
++setBrand():void
++setModel():void
++setRegistrationNumber():void
++setBuildYear():void
++setDailyPrice():void
++setRents():void
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>448</x>
+      <y>408</y>
+      <w>240</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Rent
+--
++getIssueDate(): Date
++getReturnDate(): Date
++isReturned(): boolean
++getCustomer(): Customer
++getCar(): Car
++setIssueDate(Date issueDate): void
++setReturnDate(Date returnDate): void
++setReturned(boolean returned): void
++setCustomer(Customer customer): void
++setCar(Car car): void
+bg=#57007F</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>448</x>
+      <y>88</y>
+      <w>240</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;POJO&gt;&gt;
+RentBean
+--
+-issueDate:Date
+-returnDate:Date
+-returned:boolean
+-customer:Customer
+-car:Car
+--
++getIssueDate(): Date
++getReturnDate(): Date
++isReturned(): boolean
++getCustomer(): Customer
++getCar(): Car
++setIssueDate(Date issueDate): void
++setReturnDate(Date returnDate): void
++setReturned(boolean returned): void
++setCustomer(Customer customer): void
++setCar(Car car): void
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>56</x>
+      <y>88</y>
+      <w>240</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Customer
+--
++getFirstName(): String
++getLastName(): String
++getJmbg(): String
++getHomeAddress(): String
++getEmail(): String
++getRents(): List&lt;Rent&gt;
++setFirstName(String firstName): void
++setLastName(String lastName): void
++setJmbg(String jmbg): void
++getHomeAddress(String homeAddress): void
++getEmail(String email): void
++getRents(List&lt;Rent&gt; rents): void
+bg=#57007F</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>64</x>
+      <y>840</y>
+      <w>240</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+User
+--
++getUsername(): String
++getPassword(): String
++isEmployee(): boolean
++setUsername(String username): void
++setPassword(String password): void
++setEmployee(boolean employee): void
+bg=#57007F</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>456</x>
+      <y>840</y>
+      <w>240</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;POJO&gt;&gt;
+UserBean
+--
+-username:String
+-password:String
+-employee:boolean
+--
++getUsername(): String
++getPassword(): String
++isEmployee(): boolean
++setUsername(String username): void
++setPassword(String password): void
++setEmployee(boolean employee): void
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>136</x>
+      <y>264</y>
+      <w>40</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;24;24;144</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>888</y>
+      <w>192</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;24;176;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>536</x>
+      <y>312</y>
+      <w>40</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;96;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>920</x>
+      <y>272</y>
+      <w>40</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;24;24;136</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>272</x>
+      <y>168</y>
+      <w>192</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;requires&gt;&gt;</panel_attributes>
+    <additional_attributes>24;40;176;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>664</x>
+      <y>168</y>
+      <w>184</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;requires&gt;&gt;</panel_attributes>
+    <additional_attributes>168;40;24;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>664</x>
+      <y>472</y>
+      <w>184</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;requires&gt;&gt;</panel_attributes>
+    <additional_attributes>24;40;168;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>272</x>
+      <y>472</y>
+      <w>192</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;requires&gt;&gt;</panel_attributes>
+    <additional_attributes>176;40;24;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>120</x>
+      <y>672</y>
+      <w>104</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;requires&gt;&gt;</panel_attributes>
+    <additional_attributes>56;168;56;24</additional_attributes>
+  </element>
+</diagram>
