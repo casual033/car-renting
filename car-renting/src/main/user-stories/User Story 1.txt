@@ -1,0 +1,9 @@
+As a user I want to be able to log in..
+
+Acceptance tests
+- User wants to see fields for username and password and a submit button
+- Test with an empty username and password
+- Test with wrong username 
+- Test with wrong password
+- Test with correct employee username and password
+- Test with correct customer username and password
