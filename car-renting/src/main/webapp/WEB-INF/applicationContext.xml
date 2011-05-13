@@ -7,7 +7,7 @@
 
      <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
         <property name="configLocation">
-            <value>classpath:hibernate.cfg.xml</value>
+            <value>classpath:hibernate.cfg.hsqldb.xml</value>
         </property>
         <property name="configurationClass">
             <value>org.hibernate.cfg.AnnotationConfiguration</value>

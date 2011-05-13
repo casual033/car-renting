@@ -4,7 +4,7 @@
   <session-factory>
 
     <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
-    <property name="hibernate.connection.url">jdbc:hsqldb:file:carrenting</property>
+    <property name="hibernate.connection.url">jdbc:hsqldb:file:carrenting;files_readonly=true</property>
     <property name="hibernate.connection.username">sa</property>
     <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
     <property name="hbm2ddl.auto">update</property>
@@ -13,6 +13,7 @@
     <property name="show_sql">true</property>
     <property name="format_sql">true</property>
     <property name="hibernate.connection.release_mode">after_transaction</property>
+
 
   </session-factory>
 </hibernate-configuration>

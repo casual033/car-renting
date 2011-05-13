@@ -63,7 +63,7 @@ public class CustomersAdministrationSeleniumTest extends SeleniumTestCase {
     	assertTextPresent("Returned");
     	assertTextPresent("Honda");
     	assertTextPresent("Jazz");
-    	assertTextPresent("NS 889-566");
+    	assertTextPresent("BG 708-988");
     	assertTextPresent("2011-04-20");
     	assertTextPresent("2011-04-21");
     	assertTextPresent("true");

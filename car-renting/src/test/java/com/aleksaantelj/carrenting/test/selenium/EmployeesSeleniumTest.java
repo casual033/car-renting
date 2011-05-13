@@ -95,6 +95,7 @@ public class EmployeesSeleniumTest extends SeleniumTestCase {
 		type("username","employee");
 		type("password","employee");
 		click("submit");
+		waitForPageToLoad();
 		assertTextPresent("Add new employee");
 	}
 

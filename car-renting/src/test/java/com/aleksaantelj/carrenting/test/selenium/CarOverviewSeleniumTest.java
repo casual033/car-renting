@@ -26,7 +26,7 @@ public class CarOverviewSeleniumTest extends SeleniumTestCase {
     	openBaseURL();
     	assertTextPresent("Available cars");
     	assertTextPresent("Honda Jazz");
-    	assertTextPresent("NS 889-566");
+    	assertTextPresent("BG 708-988");
     }
     
     @Test(dependsOnMethods="checkPageLoad")
@@ -38,7 +38,7 @@ public class CarOverviewSeleniumTest extends SeleniumTestCase {
     	assertTextPresent("Car: Honda Jazz ");
     	assertTextPresent("Build year: 2009 ");
     	assertTextPresent("Daily price: 1950.0 "); 
-    	assertTextPresent("Registration: NS 889-566"); 
+    	assertTextPresent("Registration: BG 708-988"); 
     	assertTextPresent("This car is available..");
     }
     

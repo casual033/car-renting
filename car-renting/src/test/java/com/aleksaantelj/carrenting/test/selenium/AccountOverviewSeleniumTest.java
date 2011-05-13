@@ -66,67 +66,67 @@ public class AccountOverviewSeleniumTest extends SeleniumTestCase {
         check("submit");
     }
 
-//    @Test(dependsOnMethods={"checkMyDetails"})
-//    public void checkUpdateProfile() {
-//    	openBaseURL();
-//    	click("link=Update my details");
-//    	waitForPageToLoad();
-//    	type("password","customer");
-//        type("firstName","new first name");
-//        type("lastName","new last name");
-//        type("email","new email");
-//        type("address","new address");
-//        type("jmbg","141414141414");
-//        click("submit");
-//        waitForPageToLoad();
-//        click("link=My Profile");
-//    	waitForPageToLoad();
-//    	assertTextPresent("new first name");
-//    	assertTextPresent("new last name");
-//    	assertTextPresent("new email");
-//    	assertTextPresent("141414141414");
-//
-//    	click("link=Update my details");
-//    	waitForPageToLoad();
-//    	type("password","customer");
-//        type("firstName","cust name");
-//        type("lastName","customer last name");
-//        type("email","reg@cust.com");
-//        type("address","Partizanska 123");
-//        type("jmbg","1212121212");
-//        click("submit");
-//        waitForPageToLoad();
-//    }
-//
-//    @Test(dependsOnMethods={"checkMyDetails","checkUpdateProfile"})
-//    public void checkUpdateProfileEmpty() {
-//    	openBaseURL();
-//    	click("link=Update my details");
-//    	waitForPageToLoad();
-//    	type("username","");
-//        type("password","");
-//        type("firstName","");
-//        type("lastName","");
-//        type("email","");
-//        type("address","");
-//        type("jmbg","");
-//        click("submit");
-//        assertTextPresent("Update account");
-//    }
-//
-//    @Test(dependsOnMethods={"checkMyDetails","checkUpdateProfile"})
-//    public void checkUpdateProfileShortUsername() {
-//    	openBaseURL();
-//    	click("link=Update my details");
-//    	waitForPageToLoad();
-//    	type("username","user");
-//        type("password","password");
-//        type("firstName","firstName");
-//        type("lastName","lastName");
-//        type("email","email@user.com");
-//        type("address","address");
-//        type("jmbg","9592252");
-//        click("submit");
-//        assertTextPresent("Update account");
-//    }
+    @Test(dependsOnMethods={"checkMyDetails"})
+    public void checkUpdateProfile() {
+    	openBaseURL();
+    	click("link=Update my details");
+    	waitForPageToLoad();
+    	type("password","customer");
+        type("firstName","new first name");
+        type("lastName","new last name");
+        type("email","new email");
+        type("address","new address");
+        type("jmbg","141414141414");
+        click("submit");
+        waitForPageToLoad();
+        click("link=My Profile");
+    	waitForPageToLoad();
+    	assertTextPresent("new first name");
+    	assertTextPresent("new last name");
+    	assertTextPresent("new email");
+    	assertTextPresent("141414141414");
+
+    	click("link=Update my details");
+    	waitForPageToLoad();
+    	type("password","customer");
+        type("firstName","cust name");
+        type("lastName","customer last name");
+        type("email","reg@cust.com");
+        type("address","Partizanska 123");
+        type("jmbg","1212121212");
+        click("submit");
+        waitForPageToLoad();
+    }
+
+    @Test(dependsOnMethods={"checkMyDetails","checkUpdateProfile"})
+    public void checkUpdateProfileEmpty() {
+    	openBaseURL();
+    	click("link=Update my details");
+    	waitForPageToLoad();
+    	type("username","");
+        type("password","");
+        type("firstName","");
+        type("lastName","");
+        type("email","");
+        type("address","");
+        type("jmbg","");
+        click("submit");
+        assertTextPresent("Update account");
+    }
+
+    @Test(dependsOnMethods={"checkMyDetails","checkUpdateProfile"})
+    public void checkUpdateProfileShortUsername() {
+    	openBaseURL();
+    	click("link=Update my details");
+    	waitForPageToLoad();
+    	type("username","user");
+        type("password","password");
+        type("firstName","firstName");
+        type("lastName","lastName");
+        type("email","email@user.com");
+        type("address","address");
+        type("jmbg","9592252");
+        click("submit");
+        assertTextPresent("Update account");
+    }
 }
