@@ -84,28 +84,28 @@ bg=blue</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>170</x>
-      <y>310</y>
+      <y>290</y>
       <w>140</w>
-      <h>50</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=*
-</panel_attributes>
-    <additional_attributes>30;30;120;30</additional_attributes>
+has rents&gt;</panel_attributes>
+    <additional_attributes>30;50;120;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>400</x>
-      <y>310</y>
+      <y>290</y>
       <w>140</w>
-      <h>50</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=*
 m2=1
-</panel_attributes>
-    <additional_attributes>30;30;120;30</additional_attributes>
+&lt;has rents</panel_attributes>
+    <additional_attributes>30;50;120;50</additional_attributes>
   </element>
 </diagram>
