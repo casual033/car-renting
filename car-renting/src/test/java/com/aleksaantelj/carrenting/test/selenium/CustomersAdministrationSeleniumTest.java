@@ -28,7 +28,7 @@ public class CustomersAdministrationSeleniumTest extends SeleniumTestCase {
     	click("link=Customer list");
     	waitForPageToLoad();
     	assertTextPresent("Registered customers");
-    	assertTextPresent("cust name customer last name");
+    	assertTextPresent("Dejan Petkovic");
     }
     
     @Test(dependsOnMethods="checkPageLoad")
@@ -36,12 +36,12 @@ public class CustomersAdministrationSeleniumTest extends SeleniumTestCase {
     	openBaseURL();
     	click("link=Customer list");
     	waitForPageToLoad();
-    	click("link=cust name customer last name");
+    	click("link=Dejan Petkovic");
     	waitForPageToLoad();
     	assertTextPresent("Customer Details");
     	assertTextPresent("Customer: customer ");
-    	assertTextPresent("First name cust name ");
-    	assertTextPresent("Last name: customer last name ");
+    	assertTextPresent("First name Dejan ");
+    	assertTextPresent("Last name: Petkovic ");
     	assertTextPresent("Email: reg@cust.com ");
     	assertTextPresent("JMBG: 1212121212 ");
     	assertTextPresent("Address: Partizanska 123 ");
@@ -52,7 +52,7 @@ public class CustomersAdministrationSeleniumTest extends SeleniumTestCase {
     	openBaseURL();
     	click("link=Customer list");
     	waitForPageToLoad();
-    	click("link=cust name customer last name");
+    	click("link=Dejan Petkovic");
     	waitForPageToLoad();
     	assertTextPresent("Customer rents");
     	assertTextPresent("Brand");

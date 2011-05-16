@@ -6,6 +6,7 @@
 package com.aleksaantelj.carrenting.pages;
 
 import com.aleksaantelj.carrenting.model.Customer;
+import com.aleksaantelj.carrenting.model.User;
 import com.aleksaantelj.carrenting.service.CustomerService;
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.Property;
@@ -18,6 +19,9 @@ import org.apache.tapestry5.ioc.annotations.Inject;
  * @author Aleksa Antelj
  */
 public class UpdateCustomer {
+
+    @SessionState
+    private User user;
 
     @SessionState
     @Property
@@ -45,6 +49,8 @@ public class UpdateCustomer {
 
     @Component
     private Form updateCustomerForm;
+    @Component
+    private Form deleteCustomerForm;
 
     void onValidateFromUpdateCustomerForm() {
         try {
@@ -55,6 +61,20 @@ public class UpdateCustomer {
     }
 
     Object onSuccessFromUpdateCustomerForm() {
+        return Index.class;
+    }
+
+    void onValidateFromDeleteCustomerForm() {
+        try {
+            customerService.deleteCustomer(customer);
+            customer = null;
+            user = null;
+        } catch(Exception e){
+            deleteCustomerForm.recordError("There were some errors, try again!");
+        }
+    }
+
+    Object onSuccessFromDeleteCustomerForm() {
         return Index.class;
     }
 

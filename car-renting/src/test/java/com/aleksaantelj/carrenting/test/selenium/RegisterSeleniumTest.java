@@ -88,5 +88,15 @@ public class RegisterSeleniumTest extends SeleniumTestCase {
         waitForPageToLoad();
         assertTextPresent("Available cars");
     }
+
+    @Test(dependsOnMethods="checkNewLogin")
+    public void delNewCustomer() {
+    	openBaseURL();
+        click("link=Update my details");
+        waitForPageToLoad();
+        click("//input[@name='submit' and @value='Delete']");
+        waitForPageToLoad();
+        assertTextPresent("Login page");
+    }
   
 }

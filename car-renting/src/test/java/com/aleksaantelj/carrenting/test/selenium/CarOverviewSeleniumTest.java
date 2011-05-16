@@ -55,8 +55,8 @@ public class CarOverviewSeleniumTest extends SeleniumTestCase {
     	assertTextPresent("Return date");
     	assertTextPresent("Returned");
     	assertTextPresent("customer");
-    	assertTextPresent("cust name");
-    	assertTextPresent("customer last name");
+    	assertTextPresent("Dejan");
+    	assertTextPresent("Petkovic");
     	assertTextPresent("2011-04-20");
     	assertTextPresent("2011-04-21");
     	assertTextPresent("true");

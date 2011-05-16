@@ -30,8 +30,8 @@ public class AccountOverviewSeleniumTest extends SeleniumTestCase {
     	waitForPageToLoad();
     	assertTextPresent("Customer Details");
     	assertTextPresent("customer");
-    	assertTextPresent("cust name");
-    	assertTextPresent("customer last name");
+    	assertTextPresent("Dejan");
+    	assertTextPresent("Petkovic");
     	assertTextPresent("1212121212");
     }
     
@@ -89,8 +89,8 @@ public class AccountOverviewSeleniumTest extends SeleniumTestCase {
     	click("link=Update my details");
     	waitForPageToLoad();
     	type("password","customer");
-        type("firstName","cust name");
-        type("lastName","customer last name");
+        type("firstName","Dejan");
+        type("lastName","Petkovic");
         type("email","reg@cust.com");
         type("address","Partizanska 123");
         type("jmbg","1212121212");
